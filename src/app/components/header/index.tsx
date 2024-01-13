@@ -6,6 +6,23 @@ import { useEffect, useState } from "react";
 
 const Header = () => {
     const [openMenu, setOpenMenu] = useState(false);
+    const [isFixed, setIsFixed] = useState(false);
+
+    const handleScroll = () => {
+        const scrollPosition = window.scrollY;
+        if (scrollPosition > 50) {
+            setIsFixed(true);
+        } else {
+            setIsFixed(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     useEffect(() => {
         const handleResize = () => {
@@ -25,7 +42,7 @@ const Header = () => {
 
     return (
         <header>
-            <div className="relative">
+            <div className={` ${isFixed ? 'fixed top-0 w-full bg-white shadow-md z-10' : 'relative'}`}>
                 <div className={`${openMenu ? 'hidden' : ''}`}>
                     {/* TOP TABLET */}
                     <div className="hidden md:flex flex-col lg:flex-row items-center lg:justify-around border-b-2 border-gray-200 py-2">
