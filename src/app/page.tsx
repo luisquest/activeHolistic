@@ -2,6 +2,7 @@ import Image from "next/image";
 import CardFlip from "./components/cards/CardFlip";
 import Carrousel from "./components/carousel";
 import Header from "./components/header";
+import Products from "./components/list/products";
 
 export default function Home() {
   return (
@@ -54,7 +55,7 @@ export default function Home() {
                 Our Capabilities
               </h2>
             </div>
-            <div className="flex flex-row gap-6 justify-center items-center text-center w-full h-[48rem]">
+            <div className="flex flex-row gap-6 justify-center items-center text-center w-full h-[40rem]">
               <CardFlip
                 className="w-1/4 h-full"
                 title="Diagnostic Center"
@@ -108,6 +109,10 @@ export default function Home() {
               <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-90 -translate-x-20 bg-black top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
               <span className="relative transition duration-300 group-hover:text-white ease">Productos →</span>
             </button>
+            {/* PRODUCTS */}
+            <div>
+              <Products />
+            </div>
           </div>
         </section >
       </main >
