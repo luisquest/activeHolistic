@@ -8,7 +8,7 @@ const Products = () => {
                 <TemplateList
                     key={index}
                     product={product}
-                    className={index === ProductsData.length - 1 ? "border-b-0" : ""}
+                    className={index !== ProductsData.length - 1 ? "border-b-2 border-gray-300" : ""}
                 />
             ))}
         </div>

@@ -41,34 +41,36 @@ const Carousel = () => {
                         alt={`Slide ${index + 1}`}
                     />
                     <div className="absolute top-1/2 left-1/2 lg:left-1/3 transform -translate-x-1/2 lg:-translate-x-1/3 -translate-y-1/2 text-white flex flex-col gap-6">
-                        {/* Caption */}
-                        <div className="text-center lg:text-start">
-                            {carousel.caption}
-                        </div>
-                        {/* Titulo */}
-                        <div className="text-7xl text-center lg:text-start font-bold">
-                            <span className="text-blue-500">{carousel.tituloResaltado}{" "}</span>
-                            {carousel.titulo}
+                        <div className="relative  w-full">
+                            {/* Caption */}
+                            <div className="text-center lg:text-start">
+                                {carousel.caption}
+                            </div>
+                            {/* Titulo */}
+                            <div className="text-2xl lg:text-7xl text-center lg:text-start font-bold">
+                                <span className="text-blue-500">{carousel.tituloResaltado}{" "}</span>
+                                {carousel.titulo}
 
-                        </div>
-                        {/* Descripcion */}
-                        <div className="text-lg text-center lg:text-start mb-5">{carousel.descripcion}</div>
+                            </div>
+                            {/* Descripcion */}
+                            <div className="text-md lg:text-lg text-center lg:text-start mb-5">{carousel.descripcion}</div>
 
-                        <div className="flex justify-center lg:justify-start gap-6 w-full">
-                            {/* Botón para redireccionar */}
-                            <button
-                                className="px-4 py-2 bg-blue-500 text-white rounded-full w-1/3 h-16"
-                                onClick={() => redirect(carousel.botonRedirecionar)}
-                            >
-                                {carousel.botonTexto}
-                            </button>
-                            {/* Botón para redireccionar */}
-                            <button
-                                className="px-4 py-2 bg-blue-500 text-white rounded-full w-1/3 h-16"
-                                onClick={() => redirect("/contact")}
-                            >
-                                {'Contáctame →'}
-                            </button>
+                            <div className="flex justify-center lg:justify-start gap-5 w-full">
+                                {/* Botón para redireccionar */}
+                                <button
+                                    className="px-6 py-2 bg-blue-500 text-xs text-white text-nowrap rounded-full w-full h-16"
+                                    onClick={() => redirect(carousel.botonRedirecionar)}
+                                >
+                                    {carousel.botonTexto}
+                                </button>
+                                {/* Botón para redireccionar */}
+                                <button
+                                    className="px-6 py-2 bg-blue-500 text-xs text-white text-nowrap rounded-full w-full h-16"
+                                    onClick={() => redirect("/contact")}
+                                >
+                                    {'Contáctame →'}
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
