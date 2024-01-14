@@ -3,6 +3,7 @@ import Carrousel from "./components/carousel";
 import Header from "./components/header";
 import Beneficts from "./components/list/beneficts/beneficts";
 import Products from "./components/list/products/products";
+import Footer from "./components/footer/footer";
 
 export default function Home() {
   return (
@@ -30,7 +31,7 @@ export default function Home() {
                 </div>
 
                 <div className="max-w-[480px]">Prosthetics is a rapidly advancing field of biomedical engineering that focuses on the design, development, and fabrication of artificial limbs and other devices that can help people with physical disabilities.</div>
-                <div className="flex gap-8 justify-center items-center whitespace-nowrap mt-5">
+                <div className="flex flex-col md:flex-row gap-8 justify-center items-center mt-5">
                   <button className="rounded-full px-14 py-5 m-1 overflow-hidden relative group cursor-pointer font-medium bg-blue-500 text-blue-950">
                     <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-90 -translate-x-20 bg-black top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
                     <span className="relative transition duration-300 group-hover:text-white ease">More info →</span>
@@ -67,7 +68,7 @@ export default function Home() {
         {/* OUR SERVICES */}
         <section className="self-center ">
           <div className="container ">
-            <div className="flex flex-col gap-12 items-center justify-center py-20">
+            <div className="flex flex-col gap-12 items-center justify-center">
               <div className="flex flex-col lg:flex-row gap-12 items-center text-center">
                 <div className="text-center">
                   <h6 className="font-semibold">OUR SERVICES</h6>
@@ -93,6 +94,7 @@ export default function Home() {
             </div>
           </div>
         </section >
+        <Footer />
       </main >
     </>
   )
