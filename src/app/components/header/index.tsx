@@ -101,7 +101,9 @@ const Header = () => {
                 {/* MENU */}
                 {openMenu &&
                     <div className="fixed z-10 bg-blue-950 min-h-screen min-w-full p-4">
+                        {/* UPPER */}
                         <div className={`relative flex-row gap-4 justify-center py-4 min-h-24`}>
+                            {/* LOGO */}
                             <div className="flex items-center justify-center">
                                 <Image src="/assets/images/logo/logo-light.png"
                                     alt="Cybron WordPress Theme"
@@ -110,18 +112,43 @@ const Header = () => {
                                     height={38}
                                 />
                             </div>
-
+                            {/* CLOSE */}
                             <button className="absolute lg:hidden right-3 top-4"
                                 onClick={() => setOpenMenu(!openMenu)}
                             >
                                 <Image src="/assets/icons/x.svg"
                                     alt="Menu"
-                                    width={27}
-                                    height={34}
+                                    width={40}
+                                    height={40}
                                     priority
                                 />
                             </button>
                         </div>
+                        {/*  LOWER - NAV MOBILE */}
+                        <nav className="p-10">
+                            <ul className="flex flex-col gap-12 text-xl font-bold text-white">
+                                <li>
+                                    <Link href={"/"} className={`flex justify-between ${pathname === '/' ? active : 'hover:text-blue-500'}`}>
+                                        <span> {"Home"}</span><span>+</span>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href={"/about-us"} className={`flex justify-between ${pathname === '/about-us' ? active : 'hover:text-blue-500'}`}>
+                                        <span>{"About Us"}</span><span>+</span>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href={"/products"} className={`flex justify-between ${pathname === '/products' ? active : 'hover:text-blue-500'}`}>
+                                        <span>{"Products"}</span><span>+</span>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href={"/contact"} className={`flex justify-between ${pathname === '/contact' ? active : 'hover:text-blue-500'}`}>
+                                        <span>{"Contactar"}</span><span>+</span>
+                                    </Link>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 }
             </div>
