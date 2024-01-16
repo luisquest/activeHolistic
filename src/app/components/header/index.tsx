@@ -64,12 +64,14 @@ const Header = () => {
                     </div>
                     <div className={`relative flex justify-center items-center py-4 min-h-24`}>
                         <div className="container flex justify-between items-center px-7 lg:px-0">
-                            <Image src="/assets/images/logo/logo.png"
-                                alt="Cybron WordPress Theme"
-                                sizes="100vw"
-                                width={170}
-                                height={38}
-                            />
+                            <Link href={"/"}>
+                                <Image src="/assets/images/logo/logo.png"
+                                    alt="Cybron WordPress Theme"
+                                    sizes="100vw"
+                                    width={170}
+                                    height={38}
+                                />
+                            </Link>
                             <nav className="hidden lg:block">
                                 <ul className="flex gap-12 text-md font-bold">
                                     <li> <Link href={"/"} className={`${pathname === '/' ? active : 'hover:text-blue-500'}`}>{"Home >"}</Link></li>
