@@ -81,8 +81,8 @@ const Header = () => {
                                 </ul>
                             </nav>
                             <div className="hidden lg:block">
-                                <button className="rounded-full px-10 py-3 m-1 overflow-hidden relative group cursor-pointer font-medium bg-blue-500 text-blue-950">
-                                    <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-90 -translate-x-20 bg-black top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+                                <button className="rounded-full px-8 py-3 m-1 overflow-hidden relative group cursor-pointer font-medium bg-blue-500 text-blue-950">
+                                    <span className="absolute w-96 h-0 transition-all duration-300 origin-center rotate-90 -translate-x-24 bg-black top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
                                     <span className="relative transition duration-300 group-hover:text-white ease">Make an appoinment →</span>
                                 </button>
                             </div>
