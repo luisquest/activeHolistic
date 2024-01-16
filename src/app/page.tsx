@@ -4,6 +4,7 @@ import Header from "./components/header";
 import Footer from "./components/footer/footer";
 import SectionAboutUs from "./sections/aboutUs";
 import SectionCarousel from "./sections/carousel";
+import SectionMap from "./sections/map";
 
 export default function Home() {
   return (
@@ -59,6 +60,7 @@ export default function Home() {
             </div>
           </div>
         </section >
+        <SectionMap />
       </main >
       <Footer />
     </>

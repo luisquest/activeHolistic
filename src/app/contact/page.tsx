@@ -1,3 +1,5 @@
+import SectionIconList from "../sections/iconsList";
+import SectionMap from "../sections/map";
 import SectionPresentation from "../sections/presentation";
 
 const Page = () => {
@@ -6,6 +8,8 @@ const Page = () => {
             <SectionPresentation title="Contact"
                 subtitle={["Contact"]}
             />
+            <SectionIconList />
+            <SectionMap />
         </main >
     );
 }
