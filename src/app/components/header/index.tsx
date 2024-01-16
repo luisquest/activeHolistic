@@ -64,12 +64,14 @@ const Header = () => {
                     </div>
                     <div className={`relative flex justify-center items-center py-4 min-h-24`}>
                         <div className="container flex justify-between items-center px-7 lg:px-0">
-                            <Image src="/assets/images/logo/logo.png"
-                                alt="Cybron WordPress Theme"
-                                sizes="100vw"
-                                width={170}
-                                height={38}
-                            />
+                            <Link href={"/"}>
+                                <Image src="/assets/images/logo/logo.png"
+                                    alt="Cybron WordPress Theme"
+                                    sizes="100vw"
+                                    width={170}
+                                    height={38}
+                                />
+                            </Link>
                             <nav className="hidden lg:block">
                                 <ul className="flex gap-12 text-md font-bold">
                                     <li> <Link href={"/"} className={`${pathname === '/' ? active : 'hover:text-blue-500'}`}>{"Home >"}</Link></li>
@@ -79,8 +81,8 @@ const Header = () => {
                                 </ul>
                             </nav>
                             <div className="hidden lg:block">
-                                <button className="rounded-full px-10 py-3 m-1 overflow-hidden relative group cursor-pointer font-medium bg-blue-500 text-blue-950">
-                                    <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-90 -translate-x-20 bg-black top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+                                <button className="rounded-full px-8 py-3 m-1 overflow-hidden relative group cursor-pointer font-medium bg-blue-500 text-blue-950">
+                                    <span className="absolute w-96 h-0 transition-all duration-300 origin-center rotate-90 -translate-x-24 bg-black top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
                                     <span className="relative transition duration-300 group-hover:text-white ease">Make an appoinment →</span>
                                 </button>
                             </div>
