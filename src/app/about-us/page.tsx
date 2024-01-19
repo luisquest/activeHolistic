@@ -1,5 +1,6 @@
 import SectionAboutUs from "../sections/aboutUs";
 import SectionPresentation from "../sections/presentation";
+import SectionTeam from "../sections/team";
 
 const Page = () => {
     return (
@@ -7,8 +8,8 @@ const Page = () => {
             <SectionPresentation title="About Us"
                 subtitle={["About Us"]}
             />
-            {/* ABOUT US */}
             <SectionAboutUs />
+            <SectionTeam />
         </main >
     );
 }
