@@ -1,4 +1,5 @@
 import SectionAboutUs from "../sections/aboutUs";
+import SectionMap from "../sections/map";
 import SectionPresentation from "../sections/presentation";
 import SectionSkills from "../sections/skills";
 import SectionTeam from "../sections/team";
@@ -12,6 +13,7 @@ const Page = () => {
             <SectionAboutUs />
             <SectionTeam />
             <SectionSkills />
+            <SectionMap />
         </main >
     );
 }
