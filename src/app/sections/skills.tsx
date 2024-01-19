@@ -13,7 +13,7 @@ const SectionSkills = () => {
                             a Comfortable Life
                         </div>
                         {SkillsData.map((skill, i) => (
-                            <div className="flex gap-4 items-start border-b-2 border-gray-200 py-8 ">
+                            <div className="flex gap-4 items-start border-b-2 border-gray-200 py-8" key={i}>
                                 <div className="text-3xl text-blue-600 font-bold">
                                     {skill.id}
                                 </div>
