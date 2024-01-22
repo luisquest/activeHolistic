@@ -5,6 +5,8 @@ import Footer from "./components/footer/footer";
 import SectionAboutUs from "./sections/aboutUs";
 import SectionCarousel from "./sections/carousel";
 import SectionMap from "./sections/map";
+import SectionZoomCards from "./sections/zoomCards";
+import SectionSkills from "./sections/skills";
 
 export default function Home() {
   return (
@@ -60,6 +62,8 @@ export default function Home() {
             </div>
           </div>
         </section >
+        <SectionZoomCards />
+        <SectionSkills />
         <SectionMap />
       </main >
       <Footer />
