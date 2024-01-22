@@ -62,8 +62,8 @@ export default function Home() {
             </div>
           </div>
         </section >
-        <SectionSkills />
         <SectionZoomCards />
+        <SectionSkills />
         <SectionMap />
       </main >
       <Footer />
