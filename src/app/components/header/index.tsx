@@ -76,7 +76,7 @@ const Header = () => {
                                 <ul className="flex gap-12 text-md font-bold">
                                     <li> <Link href={"/"} className={`${pathname === '/' ? active : 'hover:text-blue-500'}`}>{"Home >"}</Link></li>
                                     <li> <Link href={"/about-us"} className={`${pathname === '/about-us' ? active : 'hover:text-blue-500'}`} >{"About Us >"}</Link></li>
-                                    <li> <Link href={"/products"} className={`${pathname === '/products' ? active : 'hover:text-blue-500'}`}>{"Products >"}</Link></li>
+                                    {/* <li> <Link href={"/products"} className={`${pathname === '/products' ? active : 'hover:text-blue-500'}`}>{"Products >"}</Link></li> */}
                                     <li> <Link href={"/contact"} className={`${pathname === '/contact' ? active : 'hover:text-blue-500'}`}>{"Contactar >"}</Link></li>
                                 </ul>
                             </nav>
@@ -139,11 +139,11 @@ const Header = () => {
                                         <span>{"About Us"}</span><span>+</span>
                                     </Link>
                                 </li>
-                                <li>
+                               {/*  <li>
                                     <Link href={"/products"} className={`flex justify-between ${pathname === '/products' ? active : 'hover:text-blue-500'}`}>
                                         <span>{"Products"}</span><span>+</span>
                                     </Link>
-                                </li>
+                                </li> */}
                                 <li>
                                     <Link href={"/contact"} className={`flex justify-between ${pathname === '/contact' ? active : 'hover:text-blue-500'}`}>
                                         <span>{"Contactar"}</span><span>+</span>
