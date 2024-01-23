@@ -16,7 +16,6 @@ const MenuIcon: React.FC<IconProps> = ({ color = 'currentColor', width = '24px',
             viewBox="0 0 24 24"
             width={width}
             height={height}
-            style={{ color, width, height }}
         >
             <path d="M3 12h18" />
             <path d="M3 6h18" />

@@ -1,9 +1,14 @@
+import React from "react";
 import ProductsData from "@/app/data/products";
 import TemplateList from "./templateList";
 
-const Products = () => {
+interface ProductsProps {
+    className?: string;
+}
+
+const Products: React.FC<ProductsProps> = ({ className }) => {
     return (
-        <div>
+        <div className={`${className}`}>
             {ProductsData.map((product, index) => (
                 <TemplateList
                     key={index}
@@ -13,6 +18,6 @@ const Products = () => {
             ))}
         </div>
     );
-}
+};
 
 export default Products;

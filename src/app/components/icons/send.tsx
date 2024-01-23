@@ -16,7 +16,6 @@ const SendIcon: React.FC<IconProps> = ({ color = 'currentColor', width = '24px',
             viewBox="0 0 24 24"
             width={width}
             height={height}
-            style={{ color, width, height }}
         >
             <path d="M22 2L11 13" />
             <path d="M22 2l-7 20-4-9-9-4 20-7z" />

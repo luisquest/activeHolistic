@@ -1,5 +1,7 @@
+import { ReactElement } from "react";
+
 export default interface IIconsList {
-    iconImage: string;
+    iconImage: ReactElement;
     title: string;
     subtitle: string[];
 }

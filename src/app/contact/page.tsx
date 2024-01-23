@@ -5,7 +5,7 @@ import SectionPresentation from "../sections/presentation";
 
 const Page = () => {
     return (
-        <main className="flex flex-col gap-16 py-16">
+        <main className="flex flex-col gap-16 pb-16">
             <SectionPresentation title="Contact"
                 subtitle={["Contact"]}
             />

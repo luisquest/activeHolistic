@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import SendIcon from "../icons/send";
+import YoutubeIcon from "../icons/youtube";
+import FacebookIcon from "../icons/facebook";
+import InstagramIcon from "../icons/instagram";
+import TwitterIcon from "../icons/twitter";
 
 const Footer = () => {
     return (
@@ -35,30 +39,10 @@ const Footer = () => {
                                 </div>
                             </div>
                             <div className="flex gap-8">
-                                <Image src="/assets/icons/phone.svg"
-                                    alt="Menu"
-                                    width={20}
-                                    height={22}
-                                    priority
-                                />
-                                <Image src="/assets/icons/phone.svg"
-                                    alt="Menu"
-                                    width={20}
-                                    height={22}
-                                    priority
-                                />
-                                <Image src="/assets/icons/phone.svg"
-                                    alt="Menu"
-                                    width={20}
-                                    height={22}
-                                    priority
-                                />
-                                <Image src="/assets/icons/phone.svg"
-                                    alt="Menu"
-                                    width={20}
-                                    height={22}
-                                    priority
-                                />
+                                <a href="https://www.youtube.com" target="blank"><YoutubeIcon className="text-blue-500" /></a>
+                                <a href="https://www.facebook.com" target="blank"><FacebookIcon className="text-blue-500" /></a>
+                                <a href="https://www.instagram.com" target="blank"><InstagramIcon className="text-blue-500" /></a>
+                                <a href="https://www.twitter.com" target="blank"><TwitterIcon className="text-blue-500" /> </a>
                             </div>
                         </div>
                         {/* CENTRO */}
@@ -66,10 +50,9 @@ const Footer = () => {
                             <div className="text-2xl font-bold mb-8 text-blue-500">Explore</div>
                             <div>
                                 <ul className="grid grid-cols-2 gap-8 text-sm font-bold text-white">
-                                    <li><Link href={""} className="w-1/2 hover:text-blue-800" ><span className="text-blue-800 mr-1">&rsaquo;</span>Redirect 1</Link></li>
-                                    <li><Link href={""} className="w-1/2 hover:text-blue-800" ><span className="text-blue-800 mr-1">&rsaquo;</span> Redirect 2</Link></li>
-                                    <li><Link href={""} className="w-1/2 hover:text-blue-800" ><span className="text-blue-800 mr-1">&rsaquo;</span> Redirect 3</Link></li>
-                                    <li><Link href={""} className="w-1/2 hover:text-blue-800" ><span className="text-blue-800 mr-1">&rsaquo;</span> Redirect 4</Link></li>
+                                    <li><Link href={"/"} className="w-1/2 hover:text-blue-800" ><span className="text-blue-800 mr-1">&rsaquo;</span>Home</Link></li>
+                                    <li><Link href={"/about-us"} className="w-1/2 hover:text-blue-800" ><span className="text-blue-800 mr-1">&rsaquo;</span>About Us</Link></li>
+                                    <li><Link href={"/contact"} className="w-1/2 hover:text-blue-800" ><span className="text-blue-800 mr-1">&rsaquo;</span>Contactar</Link></li>
                                 </ul>
                             </div>
                         </div>

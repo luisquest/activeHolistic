@@ -37,8 +37,8 @@ export default function Home() {
         <section className="self-center ">
           <div className="container ">
             <div className="flex flex-col gap-12 items-center justify-center">
-              <div className="flex flex-col lg:flex-row gap-12 items-center text-center">
-                <div className="text-center">
+              <div className="flex flex-col lg:flex-row gap-12 items-center">
+                <div className="text-center lg:text-start">
                   <h6 className="font-semibold">OUR SERVICES</h6>
                   <h2 className="text-6xl font-bold mt-3">
                     <span className="text-blue-500">We Provide</span><br />
@@ -46,7 +46,7 @@ export default function Home() {
                     Prosthetics
                   </h2>
                 </div>
-                <p>
+                <p className="text-center text-lg">
                   Prosthetics also has the potential to enhance healthcare outcomes by improving the mobility and independence of patients,
                   reducing healthcare costs, and improving overall quality of life.
                 </p>
@@ -56,8 +56,11 @@ export default function Home() {
                 </button>
               </div>
               {/* PRODUCTS */}
-              <div>
-                <Products />
+              <div className="flex flex-col lg:flex-row items-center">
+                <div className="hidden lg:block lg:w-2/6">
+                  <img src="/assets/images/photos/legs.png" alt="Products" />
+                </div>
+                <Products className="w-full lg:w-4/6" />
               </div>
             </div>
           </div>
