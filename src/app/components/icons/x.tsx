@@ -16,7 +16,6 @@ const XIcon: React.FC<IconProps> = ({ color = 'currentColor', width = '24px', he
             viewBox="0 0 24 24"
             width={width}
             height={height}
-            style={{ color, width, height }}
         >
             <path d="M18 6L6 18" /><path d="M6 6l12 12" />
         </svg>
