@@ -1,5 +1,3 @@
-import Beneficts from "./components/list/beneficts/beneficts";
-import Products from "./components/list/products/products";
 import Header from "./components/header";
 import Footer from "./components/footer/footer";
 import SectionAboutUs from "./sections/aboutUs";
