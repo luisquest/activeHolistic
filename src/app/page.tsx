@@ -1,12 +1,12 @@
-import Header from "./components/header";
 import Footer from "./components/footer/footer";
+import Header from "./components/header";
 import SectionAboutUs from "./sections/aboutUs";
+import SectionBeneficts from "./sections/beneficts";
 import SectionCarousel from "./sections/carousel";
 import SectionMap from "./sections/map";
-import SectionZoomCards from "./sections/zoomCards";
-import SectionSkills from "./sections/skills";
-import SectionBeneficts from "./sections/beneficts";
+import SectionZoomCardsSuscribeNow from "./sections/mix/SectionZoomsCardsSuscribeNow";
 import SectionOurServices from "./sections/ourServices";
+import SectionSkills from "./sections/skills";
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
         <SectionAboutUs />
         <SectionBeneficts />
         <SectionOurServices />
-        <SectionZoomCards />
+        <SectionZoomCardsSuscribeNow />
         <SectionSkills />
         <SectionMap />
       </main >
