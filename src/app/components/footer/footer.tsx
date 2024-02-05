@@ -74,7 +74,7 @@ const Footer = () => {
                             </div>
                             <div className="flex items-center">
                                 <input type="checkbox" value="suscribed" name="suscribed" />
-                                <label htmlFor="suscribed" className="ml-2 text-sm">I authorize the use of the information entered</label>
+                                <label htmlFor="suscribed" className="ml-2 text-sm text-white">I authorize the use of the information entered</label>
                             </div>
                         </div>
                     </div>
