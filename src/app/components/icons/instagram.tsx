@@ -7,11 +7,11 @@ const InstagramIcon: React.FC<IconProps> = ({ color = 'currentColor', width = '2
             className={`with-icon_icon__MHUeb ${className}`}
             data-testid="geist-icon"
             fill="none"
-            shape-rendering="geometricPrecision"
+            shapeRendering="geometricPrecision"
             stroke={color}
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="1.5"
             viewBox="0 0 24 24"
             width={width}
             height={height}
