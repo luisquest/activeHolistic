@@ -3,6 +3,7 @@ import Header from "./components/header";
 import SectionAboutUs from "./sections/aboutUs";
 import SectionBeneficts from "./sections/beneficts";
 import SectionCarousel from "./sections/carousel";
+import SectionJustText from "./sections/justText";
 import SectionMap from "./sections/map";
 import SectionZoomCardsSuscribeNow from "./sections/mix/SectionZoomsCardsSuscribeNow";
 import SectionOurServices from "./sections/ourServices";
@@ -19,6 +20,7 @@ export default function Home() {
         <SectionOurServices />
         <SectionZoomCardsSuscribeNow />
         <SectionSkills />
+        <SectionJustText />
         <SectionMap />
       </main >
       <Footer />
