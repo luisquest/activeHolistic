@@ -9,6 +9,7 @@ import SectionMap from "./sections/map";
 import SectionZoomCardsSuscribeNow from "./sections/mix/SectionZoomsCardsSuscribeNow";
 import SectionOurServices from "./sections/ourServices";
 import SectionSkills from "./sections/skills";
+import SectionSuccessStories from "./sections/successStories";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <SectionSkills />
         <SectionJustText />
         <SectionIconsAnimatedList />
+        <SectionSuccessStories />
         <SectionMap />
       </main >
       <Footer />
