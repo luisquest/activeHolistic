@@ -49,7 +49,7 @@ const Header = () => {
                 {/* TOP TABLET */}
                 <div className={`relative hidden md:flex md:justify-center md:items-center md:border-b-2 md:border-gray-200 md:py-2`}>
                     <div className="container md:flex md:flex-col lg:flex-row items-center lg:justify-between px-7 lg:px-0">
-                        <div className="flex flex-row gap-8 ">
+                        <div className="flex flex-row gap-8 text-xs">
                             <div>citas@activeholistic.pe</div>
                             <div>av. Mariscal La Mar 550, Oficina 204, Miraflores </div>
                             <div>+51 965 836 372  </div>
