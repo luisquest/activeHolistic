@@ -6,9 +6,9 @@ const SectionBeneficts = () => {
             <div className="container">
                 <div className="flex flex-col gap-12 items-center py-20 px-20">
                     <div className="text-center">
-                        <h6 className="font-semibold">CLINIC BENEFITS</h6>
+                        <h6 className="font-semibold">Nuestros</h6>
                         <h2 className="text-6xl font-bold mt-3">
-                            Our Capabilities
+                            SERVICIOS
                         </h2>
                     </div>
                 </div>
