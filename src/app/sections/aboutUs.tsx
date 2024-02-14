@@ -23,7 +23,7 @@ const SectionAboutUs = () => {
                         <div className="flex flex-col md:flex-row gap-8 justify-center items-center mt-5">
                             <Link href={'/about-us'} className="rounded-full px-14 py-5 m-1 overflow-hidden relative group cursor-pointer font-medium bg-blue-500 text-blue-950">
                                 <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-90 -translate-x-20 bg-black top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
-                                <span className="relative transition duration-300 group-hover:text-white ease">Más infor →</span>
+                                <span className="relative transition duration-300 group-hover:text-white ease">Conocenos →</span>
                             </Link>
                             <button className="flex gap-2 justify-center items-center self-center px-4 h-6 ">
                                 <span className="bg-blue-100 p-4 rounded-full"><Image src="/assets/icons/phone.svg"
