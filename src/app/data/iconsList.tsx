@@ -7,31 +7,31 @@ import IIconsList from "./interfaces/iiconslist";
 const IconsListData: IIconsList[] = [
     {
         iconImage: <MapPinIcon className="size-16 text-blue-600" />,
-        title: "Location",
+        title: "Dirección",
         subtitle: [
-            "29 Nicolas str, New York,", "987597-50"
+            "av. Mariscal La Mar 550, Oficina 204, Miraflores",
         ]
     },
     {
         iconImage: <PhoneIcon className="size-16 text-blue-600" />,
-        title: "Phones",
+        title: "Teléfonos",
         subtitle: [
-            "0(800) 890-90-609", "0(800) 890-90-620"
+            "+51 965 836 372", 
         ]
     },
     {
         iconImage: <MailIcon className="size-16 text-blue-600" />,
-        title: "Email",
+        title: "Correo electrónico",
         subtitle: [
-            "sale@like-themes.com", "tech@like-themes.com"
+            "citas@activeholistic.pe",
         ]
 
     },
     {
         iconImage: <ClockIcon className="size-16 text-blue-600" />,
-        title: "Working Hours",
+        title: "Horario de atención",
         subtitle: [
-            "Wednesday - Sunday", "7:00 AM - 5:00 PM"
+            "Lunes - Viernes | 7:00 AM - 5:00 PM", "Sábados | 7:00 AM - 2:00 PM"
         ]
     }
 ];
