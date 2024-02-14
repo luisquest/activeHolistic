@@ -75,16 +75,16 @@ const Header = () => {
                         </div>
                         <nav className="hidden lg:block">
                             <ul className="flex gap-12 text-md font-bold">
-                                <li> <Link href={"/"} className={`${pathname === '/' ? active : 'hover:text-blue-500'}`}>{"Home >"}</Link></li>
-                                <li> <Link href={"/about-us"} className={`${pathname === '/about-us' ? active : 'hover:text-blue-500'}`} >{"About Us >"}</Link></li>
+                                <li> <Link href={"/"} className={`${pathname === '/' ? active : 'hover:text-blue-500'}`}>{"Inicio >"}</Link></li>
+                                <li> <Link href={"/about-us"} className={`${pathname === '/about-us' ? active : 'hover:text-blue-500'}`} >{"Servicios >"}</Link></li>
                                 {/* <li> <Link href={"/products"} className={`${pathname === '/products' ? active : 'hover:text-blue-500'}`}>{"Products >"}</Link></li> */}
-                                <li> <Link href={"/contact"} className={`${pathname === '/contact' ? active : 'hover:text-blue-500'}`}>{"Contactar >"}</Link></li>
+                                <li> <Link href={"/contact"} className={`${pathname === '/contact' ? active : 'hover:text-blue-500'}`}>{"Contacto >"}</Link></li>
                             </ul>
                         </nav>
                         <div className="hidden lg:block">
                             <button className="rounded-full px-8 py-3 m-1 overflow-hidden relative group cursor-pointer font-medium bg-blue-500 text-blue-950">
                                 <span className="absolute w-96 h-0 transition-all duration-300 origin-center rotate-90 -translate-x-24 bg-black top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
-                                <span className="relative transition duration-300 group-hover:text-white ease">Make an appoinment →</span>
+                                <span className="relative transition duration-300 group-hover:text-white ease">Solicitar una cita →</span>
                             </button>
                         </div>
                         {/* OPEN MENU */}
@@ -147,7 +147,7 @@ const Header = () => {
                                 </li> */}
                             <li>
                                 <Link href={"/contact"} className={`flex justify-between ${pathname === '/contact' ? active : 'hover:text-blue-500'}`}>
-                                    <span>{"Contactar"}</span><span>+</span>
+                                    <span>{"Contacto"}</span><span>+</span>
                                 </Link>
                             </li>
                         </ul>
