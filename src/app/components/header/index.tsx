@@ -50,14 +50,14 @@ const Header = () => {
                 <div className={`relative hidden md:flex md:justify-center md:items-center md:border-b-2 md:border-gray-200 md:py-2`}>
                     <div className="container md:flex md:flex-col lg:flex-row items-center lg:justify-between px-7 lg:px-0">
                         <div className="flex flex-row gap-8 ">
-                            <div>prueba</div>
-                            <div>13 Division st, New York, 16004</div>
-                            <div>+1 800 777 000</div>
+                            <div>citas@activeholistic.pe</div>
+                            <div>av. Mariscal La Mar 550, Oficina 204, Miraflores </div>
+                            <div>+51 965 836 372  </div>
                         </div>
                         <div className="hidden lg:flex gap-8 ">
-                            <div>AA</div>
-                            <div>BB <span>+99</span></div>
-                            <div>CC</div>
+                            <div>FB</div>
+                            <div>IN <span></span></div>
+                            <div>LN</div>
                         </div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@ const Header = () => {
                         <div className="w-full flex justify-center lg:w-auto lg:block lg:justify-normal">
                             <Link href={"/"}>
                                 <Image src="/assets/images/logo/logo.png"
-                                    alt="Cybron WordPress Theme"
+                                    alt=""
                                     sizes="100vw"
                                     width={170}
                                     height={38}
@@ -109,7 +109,7 @@ const Header = () => {
                         {/* LOGO */}
                         <div className="flex items-center justify-center">
                             <Image src="/assets/images/logo/logo-light.png"
-                                alt="Cybron WordPress Theme"
+                                alt=""
                                 sizes="100vw"
                                 width={170}
                                 height={38}
@@ -132,12 +132,12 @@ const Header = () => {
                         <ul className="flex flex-col gap-12 text-xl font-bold text-white">
                             <li>
                                 <Link href={"/"} className={`flex justify-between ${pathname === '/' ? active : 'hover:text-blue-500'}`}>
-                                    <span> {"Home"}</span><span>+</span>
+                                    <span> {"Inicio"}</span><span>+</span>
                                 </Link>
                             </li>
                             <li>
                                 <Link href={"/about-us"} className={`flex justify-between ${pathname === '/about-us' ? active : 'hover:text-blue-500'}`}>
-                                    <span>{"About Us"}</span><span>+</span>
+                                    <span>{"Servicios"}</span><span>+</span>
                                 </Link>
                             </li>
                             {/*  <li>
