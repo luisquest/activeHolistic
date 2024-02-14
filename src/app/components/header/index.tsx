@@ -50,7 +50,7 @@ const Header = () => {
                 <div className={`relative hidden md:flex md:justify-center md:items-center md:border-b-2 md:border-gray-200 md:py-2`}>
                     <div className="container md:flex md:flex-col lg:flex-row items-center lg:justify-between px-7 lg:px-0">
                         <div className="flex flex-row gap-8 ">
-                            <div>support@cybron-systems.com</div>
+                            <div>prueba</div>
                             <div>13 Division st, New York, 16004</div>
                             <div>+1 800 777 000</div>
                         </div>
