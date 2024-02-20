@@ -7,8 +7,8 @@ const SectionAboutUs = () => {
             <div className="container">
                 <div className="flex flex-col xl:flex-row gap-14 items-center lg:justify-center py-4">
                     <div className="flex gap-4 justify-center items-end">
-                        <Image src="/assets/images/photos/pasillo_blanco.jpg" alt="imagen 1" width={230} height={318} className="hidden md:block" />
-                        <Image src="/assets/images/photos/protesis_pierna.jpg" alt="imagen 2" width={315} height={439} />
+                        <Image src="/assets/images/photos/pasillo_blanco.jpg" alt="imagen 1" width={230} height={318} className="hidden md:block w-full h-auto" />
+                        <Image src="/assets/images/photos/protesis_pierna.jpg" alt="imagen 2" width={315} height={439} className="w-full h-auto" />
                     </div>
                     <div className="flex flex-col gap-6 justify-center items-center text-center">
                         <div className="text-center">

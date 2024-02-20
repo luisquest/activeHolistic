@@ -1,12 +1,75 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
-import SendIcon from "../icons/send";
-import YoutubeIcon from "../icons/youtube";
 import FacebookIcon from "../icons/facebook";
 import InstagramIcon from "../icons/instagram";
+import SendIcon from "../icons/send";
 import TwitterIcon from "../icons/twitter";
+import YoutubeIcon from "../icons/youtube";
+import { FormEvent, useEffect, useState } from "react";
 
 const Footer = () => {
+    const [formData, setFormData] = useState({
+        subject: "Suscripción de correo",
+        email: "",
+        type: "SF"
+    });
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+        });
+        console.log("form data", formData);
+    };
+
+    const [canSubmit, setCanSubmit] = useState(formData.email.length > 5);
+
+    useEffect(() => {
+        const lastSubmissionTime = localStorage.getItem("lastSubmissionTime");
+        if (lastSubmissionTime) {
+            const fiveMinutesAgo = Date.now() - 5 * 60 * 1000;
+            setCanSubmit(parseInt(lastSubmissionTime) < fiveMinutesAgo);
+        }
+    }, []);
+
+    const handleSubmit = async (e: FormEvent) => {
+        e.preventDefault();
+        const lastSubmissionTime = localStorage.getItem("lastSubmissionTime");
+        if (lastSubmissionTime) {
+            const fiveMinutesAgo = Date.now() - 5 * 60 * 1000;
+            setCanSubmit(parseInt(lastSubmissionTime) < fiveMinutesAgo);
+        }
+        if (!canSubmit) {
+            console.log("Please wait 5 minutes before submitting another message.");
+            return;
+        }
+
+        try {
+            const res = await fetch("/api/send", {
+                method: "POST",
+                body: JSON.stringify(formData),
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
+
+            const data = await res.json();
+            console.log("DATA", data);
+
+            // Update last submission time in localStorage
+            localStorage.setItem("lastSubmissionTime", Date.now().toString());
+
+            // Set a timeout to allow submissions after 5 minutes
+            setTimeout(() => {
+                setCanSubmit(true);
+            }, 5 * 60 * 1000);
+        } catch (error) {
+            console.error("Error sending message:", error);
+        }
+    };
+
+
     return (
         <footer>
             <div className="flex flex-col bg-blue-950 pt-16">
@@ -60,17 +123,25 @@ const Footer = () => {
                         <div className="w-full md:w-1/2 lg:w-2/5">
                             <div className="text-2xl font-bold mb-8 text-blue-500">Suscribe</div>
                             <div className="relative mb-4 max-w-96">
-                                <div className="relative flex items-center border rounded-full ">
+                                <form onSubmit={handleSubmit} className="relative flex items-center border rounded-full ">
                                     <input
-                                        type="text"
+                                        id="email" name="email"
+                                        type="email"
                                         placeholder="Escribe algo..."
                                         className="p-4 rounded-full focus:outline-none focus:border-blue-500 flex-1"
+                                        onChange={handleChange}
+                                        minLength={5}
+                                        required
                                     />
-                                    <span className="absolute right-0 flex items-center pr-0.5">
+                                    <button type="submit"
+                                        className={`absolute right-0 flex items-center pr-0.5 ${canSubmit ? '' : ''}`}
+                                        disabled={!canSubmit}>
                                         <SendIcon width="54px" height="54px"
-                                            className="p-3 bg-blue-300 rounded-full hover:text-white hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue hover:stroke-white" />
-                                    </span>
-                                </div>
+                                            className={`p-3 rounded-full focus:outline-none focus:shadow-outline-blue 
+                                            ${canSubmit ? 'bg-blue-300 hover:text-white hover:bg-blue-600 hover:stroke-white' : 'bg-gray-200'}`}
+                                        />
+                                    </button>
+                                </form>
                             </div>
                             <div className="flex items-center">
                                 <input type="checkbox" value="suscribed" name="suscribed" />

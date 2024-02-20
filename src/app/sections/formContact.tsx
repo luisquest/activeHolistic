@@ -7,6 +7,7 @@ const SectionFormContact = () => {
         name: "",
         email: "",
         message: "",
+        type: "CF"
     });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -88,14 +89,14 @@ const SectionFormContact = () => {
                         id="message" name="message" rows={3} placeholder="Message" onChange={handleChange}
                     ></textarea>
                     <button
-                        className={`rounded-full px-16 py-5 m-1 overflow-hidden relative group cursor-pointer font-medium ${!canSubmit ? 'bg-gray-400 text-gray-700 cursor-not-allowed' : 'bg-blue-500 text-blue-950'
-                            }`}
+                        className={`rounded-full px-16 py-5 m-1 overflow-hidden relative group cursor-pointer font-medium 
+                        ${canSubmit ? 'bg-blue-500 text-blue-950' : 'bg-gray-400 text-gray-700 cursor-not-allowed'}`}
                         type="submit"
                         disabled={!canSubmit}
                     >
-                        <span className={`${!canSubmit ? 'text-gray-500' : 'absolute w-56 h-0 transition-all duration-300 origin-center rotate-90 -translate-x-20 bg-black top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease'}`}></span>
-                        <span className={`relative transition duration-300 group-hover:text-white ease ${!canSubmit ? 'text-gray-500' : ''
-                            }`}
+                        <span className={`${canSubmit ? 'absolute w-56 h-0 transition-all duration-300 origin-center rotate-90 -translate-x-20 bg-black top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease' : 'text-gray-500'}`}></span>
+                        <span className={`relative transition duration-300 group-hover:text-white ease 
+                        ${canSubmit ? '' : 'text-gray-500'}`}
                         >
                             Enviar
                         </span>
