@@ -1,48 +1,46 @@
 'use client'
-import Image from "next/image";
-import Link from "next/link";
-import FacebookIcon from "../icons/facebook";
-import InstagramIcon from "../icons/instagram";
-import SendIcon from "../icons/send";
-import TwitterIcon from "../icons/twitter";
-import YoutubeIcon from "../icons/youtube";
-import { FormEvent, useEffect, useState } from "react";
+import Image from "next/image"
+import Link from "next/link"
+import FacebookIcon from "../icons/facebook"
+import InstagramIcon from "../icons/instagram"
+import SendIcon from "../icons/send"
+import TwitterIcon from "../icons/twitter"
+import YoutubeIcon from "../icons/youtube"
+import { FormEvent, useEffect, useState } from "react"
 
 const Footer = () => {
     const [formData, setFormData] = useState({
         subject: "Suscripción de correo",
         email: "",
         type: "SF"
-    });
+    })
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value,
-        });
-        console.log("form data", formData);
-    };
+        })
+    }
 
-    const [canSubmit, setCanSubmit] = useState(formData.email.length > 5);
+    const [canSubmit, setCanSubmit] = useState(formData.email.length > 5)
 
     useEffect(() => {
-        const lastSubmissionTime = localStorage.getItem("lastSubmissionTime");
+        const lastSubmissionTime = localStorage.getItem("lastSubmissionTime")
         if (lastSubmissionTime) {
-            const fiveMinutesAgo = Date.now() - 5 * 60 * 1000;
-            setCanSubmit(parseInt(lastSubmissionTime) < fiveMinutesAgo);
+            const fiveMinutesAgo = Date.now() - 5 * 60 * 1000
+            setCanSubmit(parseInt(lastSubmissionTime) < fiveMinutesAgo)
         }
-    }, []);
+    }, [])
 
     const handleSubmit = async (e: FormEvent) => {
-        e.preventDefault();
-        const lastSubmissionTime = localStorage.getItem("lastSubmissionTime");
+        e.preventDefault()
+        const lastSubmissionTime = localStorage.getItem("lastSubmissionTime")
         if (lastSubmissionTime) {
-            const fiveMinutesAgo = Date.now() - 5 * 60 * 1000;
-            setCanSubmit(parseInt(lastSubmissionTime) < fiveMinutesAgo);
+            const fiveMinutesAgo = Date.now() - 5 * 60 * 1000
+            setCanSubmit(parseInt(lastSubmissionTime) < fiveMinutesAgo)
         }
         if (!canSubmit) {
-            console.log("Please wait 5 minutes before submitting another message.");
-            return;
+            return alert("Please wait 5 minutes before submitting another message.")
         }
 
         try {
@@ -52,23 +50,21 @@ const Footer = () => {
                 headers: {
                     "Content-Type": "application/json",
                 },
-            });
+            })
 
-            const data = await res.json();
-            console.log("DATA", data);
+            const data = await res.json()
 
             // Update last submission time in localStorage
-            localStorage.setItem("lastSubmissionTime", Date.now().toString());
+            localStorage.setItem("lastSubmissionTime", Date.now().toString())
 
             // Set a timeout to allow submissions after 5 minutes
             setTimeout(() => {
-                setCanSubmit(true);
-            }, 5 * 60 * 1000);
+                setCanSubmit(true)
+            }, 5 * 60 * 1000)
         } catch (error) {
-            console.error("Error sending message:", error);
+            console.error("Error sending message:", error)
         }
-    };
-
+    }
 
     return (
         <footer>
@@ -113,9 +109,9 @@ const Footer = () => {
                             <div className="text-2xl font-bold mb-8 text-blue-500">Explore</div>
                             <div>
                                 <ul className="grid grid-cols-2 gap-8 text-sm font-bold text-white">
-                                    <li><Link href={"/"} className="w-1/2 hover:text-blue-800" ><span className="text-blue-800 mr-1">&rsaquo;</span>Home</Link></li>
-                                    <li><Link href={"/about-us"} className="w-1/2 hover:text-blue-800" ><span className="text-blue-800 mr-1">&rsaquo;</span>About Us</Link></li>
-                                    <li><Link href={"/contact"} className="w-1/2 hover:text-blue-800" ><span className="text-blue-800 mr-1">&rsaquo;</span>Contactar</Link></li>
+                                    <li><Link href={"/"} className="w-1/2 hover:text-blue-800" ><span className="text-blue-800 mr-1">&rsaquo</span>Home</Link></li>
+                                    <li><Link href={"/about-us"} className="w-1/2 hover:text-blue-800" ><span className="text-blue-800 mr-1">&rsaquo</span>About Us</Link></li>
+                                    <li><Link href={"/contact"} className="w-1/2 hover:text-blue-800" ><span className="text-blue-800 mr-1">&rsaquo</span>Contactar</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -157,7 +153,7 @@ const Footer = () => {
                 </div>
             </div>
         </footer>
-    );
+    )
 }
 
-export default Footer;
+export default Footer
