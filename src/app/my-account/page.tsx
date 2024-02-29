@@ -1,10 +1,9 @@
 'use client'
-import React, { useEffect, useState } from "react"
-import SectionPresentation from "../sections/presentation"
-import Link from "next/link"
-import { useForm } from "react-hook-form"
 import { signIn, signOut, useSession } from "next-auth/react"
-import { useRouter } from "next/navigation"
+import Link from "next/link"
+import { useEffect, useState } from "react"
+import { useForm } from "react-hook-form"
+import SectionPresentation from "../sections/presentation"
 import SectionSkeleton from "../sections/skeleton/skeleton"
 
 const Page = () => {
@@ -52,58 +51,64 @@ const Page = () => {
             </main >
 
         if (status === "unauthenticated") {
-            return <main className="flex flex-col items-center gap-16 pb-16">
+            return <main className="flex flex-col items-center gap-16">
                 <SectionPresentation title="My Account" subtitle={["My Account"]} />
-                <section className="container w-full px-6">
+                <section className="container w-full px-4 pt-9 pb-24">
                     <div className="flex flex-col gap-5">
-                        <h1 className="text-6xl font-bold">Login</h1>
+                        <h1 className="text-6xl font-bold mt-14 mb-4">Login</h1>
                         <div className="border">
                             <div className="p-6">
                                 {restError && <h1 className="text-red-500 text-lg">{restError}</h1>}
                                 <form onSubmit={onSubmit} className="flex flex-col gap-4 text-lg">
                                     <div>
-                                        <label htmlFor="email">Username or email address {errors.email?.type === "required" && <RedAsterict />}</label>
-                                        <input type="email"
-                                            className="w-full outline-none"
-                                            placeholder="example@email.com"
-                                            autoComplete="email"
-                                            {...register("email", {
-                                                required: {
-                                                    value: true,
-                                                    message: "Email is required"
-                                                }
-                                            })}
-                                        />
-                                        {errors.email && (<span className="text-red-500">
-                                            {errors.email?.message as string}
-                                        </span>)}
+                                        <label htmlFor="email" className="text-sm">Username or email address {errors.email?.type === "required" && <RedAsterict />}</label>
+                                        <div className="px-5 py-[18px]">
+                                            <input type="email"
+                                                className="w-full outline-none text-base"
+                                                placeholder="example@email.com"
+                                                autoComplete="email"
+                                                {...register("email", {
+                                                    required: {
+                                                        value: true,
+                                                        message: "Email is required"
+                                                    }
+                                                })}
+                                            />
+                                            {errors.email && (<span className="text-red-500 text-base">
+                                                {errors.email?.message as string}
+                                            </span>)}
+                                        </div>
                                     </div>
                                     <div>
-                                        <label htmlFor="password">Password {errors.password?.type === "required" && <RedAsterict />}</label>
-                                        <input type="password"
-                                            className="w-full outline-none"
-                                            autoComplete="current-password"
-                                            {...register("password", {
-                                                required: {
-                                                    value: true,
-                                                    message: "Password is required"
-                                                }
-                                            })}
-                                        />
-                                        {errors.password && (<span className="text-red-500">
-                                            {errors.password?.message as string}
-                                        </span>)}
+                                        <label htmlFor="password" className="text-sm">Password {errors.password?.type === "required" && <RedAsterict />}</label>
+                                        <div className="px-5 py-[18px]">
+                                            <input type="password"
+                                                className="w-full outline-none text-base"
+                                                autoComplete="current-password"
+                                                {...register("password", {
+                                                    required: {
+                                                        value: true,
+                                                        message: "Password is required"
+                                                    }
+                                                })}
+                                            />
+                                            {errors.password && (<span className="text-red-500 text-base">
+                                                {errors.password?.message as string}
+                                            </span>)}</div>
                                     </div>
                                     <div className="flex gap-4">
                                         <button type="submit">Login</button>
-                                        <input id="rememberMe" type="checkbox"
-                                            {...register("rememberMe")}
-                                        />
+                                        <div className="flex items-center gap-3 text-sm">
+                                            <input id="rememberMe" type="checkbox" className="hover:cursor-pointer"
+                                                {...register("rememberMe")}
+                                            />
+                                            <label htmlFor="rememberMe" className="hover:cursor-pointer">Remember me</label>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
-                            <div className="border border-t-2 p-6">
-                                <Link href={"/my-account/register"}>New User?</Link>
+                            <div className="border-t p-6">
+                                <Link href={"/my-account/register"} className="hover:text-blue-800">New User?</Link>
                                 {/* <Link href={"/my-account/lost-password"}>Lost your password?</Link> */}
                             </div>
                         </div>
