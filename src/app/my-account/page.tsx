@@ -97,7 +97,7 @@ const Page = () => {
                                             </span>)}</div>
                                     </div>
                                     <div className="flex gap-4">
-                                        <button type="submit">Login</button>
+                                        <button type="submit" className="min-w-[180px] px-7 py-3 text-center text-black hover:text-white rounded-full bg-blue-700">Log In</button>
                                         <div className="flex items-center gap-3 text-sm">
                                             <input id="rememberMe" type="checkbox" className="hover:cursor-pointer"
                                                 {...register("rememberMe")}
