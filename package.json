@@ -4,25 +4,34 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
+    "@prisma/client": "5.10",
+    "@types/bcrypt": "5",
+    "@vercel/postgres": "0.7",
+    "bcrypt": "5.1",
     "next": "14",
+    "next-auth": "4.24",
     "react": "18",
     "react-dom": "18",
+    "react-hook-form": "7.50",
     "resend": "2"
   },
   "devDependencies": {
-    "@types/node": "20",
+    "@types/node": "20.11",
     "@types/react": "18",
     "@types/react-dom": "18",
     "autoprefixer": "10",
     "eslint": "8",
     "eslint-config-next": "14",
     "postcss": "8",
+    "prisma": "5.10",
     "tailwindcss": "3",
-    "typescript": "5"
+    "ts-node": "^10.9",
+    "typescript": "5.3"
   }
 }

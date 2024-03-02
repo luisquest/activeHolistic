@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import AvatarIcon from "../icons/avatar";
 
 const Header = () => {
     const [openMenu, setOpenMenu] = useState(false);
@@ -55,7 +56,7 @@ const Header = () => {
                             <div>+51 965 836 372  </div>
                         </div>
                         <div className="hidden lg:flex gap-8 ">
-                            <div>FB</div>
+                            <div><Link href={"/my-account"}><AvatarIcon className="text-black" /></Link></div>
                             <div>IN <span></span></div>
                             <div>LN</div>
                         </div>

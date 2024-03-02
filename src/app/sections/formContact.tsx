@@ -1,5 +1,5 @@
 "use client"
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useEffect, useState } from "react"
 
 const SectionFormContact = () => {
     const [formData, setFormData] = useState({
@@ -8,36 +8,34 @@ const SectionFormContact = () => {
         email: "",
         message: "",
         type: "CF"
-    });
+    })
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value,
-        });
-        console.log("form data", formData);
-    };
+        })
+    }
 
-    const [canSubmit, setCanSubmit] = useState(true);
+    const [canSubmit, setCanSubmit] = useState(true)
 
     useEffect(() => {
-        const lastSubmissionTime = localStorage.getItem("lastSubmissionTime");
+        const lastSubmissionTime = localStorage.getItem("lastSubmissionTime")
         if (lastSubmissionTime) {
-            const fiveMinutesAgo = Date.now() - 5 * 60 * 1000;
-            setCanSubmit(parseInt(lastSubmissionTime) < fiveMinutesAgo);
+            const fiveMinutesAgo = Date.now() - 5 * 60 * 1000
+            setCanSubmit(parseInt(lastSubmissionTime) < fiveMinutesAgo)
         }
-    }, []);
+    }, [])
 
     const handleSubmit = async (e: FormEvent) => {
-        e.preventDefault();
-        const lastSubmissionTime = localStorage.getItem("lastSubmissionTime");
+        e.preventDefault()
+        const lastSubmissionTime = localStorage.getItem("lastSubmissionTime")
         if (lastSubmissionTime) {
-            const fiveMinutesAgo = Date.now() - 5 * 60 * 1000;
-            setCanSubmit(parseInt(lastSubmissionTime) < fiveMinutesAgo);
+            const fiveMinutesAgo = Date.now() - 5 * 60 * 1000
+            setCanSubmit(parseInt(lastSubmissionTime) < fiveMinutesAgo)
         }
         if (!canSubmit) {
-            console.log("Please wait 5 minutes before submitting another message.");
-            return;
+            return alert("Please wait 5 minutes before submitting another message.")
         }
 
         try {
@@ -47,22 +45,19 @@ const SectionFormContact = () => {
                 headers: {
                     "Content-Type": "application/json",
                 },
-            });
-
-            const data = await res.json();
-            console.log("DATA", data);
+            })
 
             // Update last submission time in localStorage
-            localStorage.setItem("lastSubmissionTime", Date.now().toString());
+            localStorage.setItem("lastSubmissionTime", Date.now().toString())
 
             // Set a timeout to allow submissions after 5 minutes
             setTimeout(() => {
-                setCanSubmit(true);
-            }, 5 * 60 * 1000);
+                setCanSubmit(true)
+            }, 5 * 60 * 1000)
         } catch (error) {
-            console.error("Error sending message:", error);
+            console.error("Error sending message:", error)
         }
-    };
+    }
 
     return (
         <section className="self-center">
@@ -104,7 +99,7 @@ const SectionFormContact = () => {
                 </form>
             </div>
         </section>
-    );
-};
+    )
+}
 
-export default SectionFormContact;
+export default SectionFormContact
