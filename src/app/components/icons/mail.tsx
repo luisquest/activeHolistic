@@ -1,12 +1,12 @@
 import React from 'react';
 import IconProps from './iconProps';
 
-const MailIcon: React.FC<IconProps> = ({ color = 'currentColor', width = '24px', height = '24px', className }) => {
+const MailIcon: React.FC<IconProps> = ({ fill = 'none', width = '24px', height = '24px', className }) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg"
             className={`with-icon_icon__MHUeb ${className}`}
             data-testid="geist-icon"
-            fill="none"
+            fill={fill}
             shapeRendering="geometricPrecision"
             stroke="currentColor"
             strokeLinecap="round"

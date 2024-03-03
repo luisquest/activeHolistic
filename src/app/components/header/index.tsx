@@ -4,6 +4,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import AvatarIcon from "../icons/avatar";
+import MailIcon from "../icons/mail";
+import PhoneIcon from "../icons/phone";
+import MapPinIcon from "../icons/map-pin";
 
 const Header = () => {
     const [openMenu, setOpenMenu] = useState(false);
@@ -51,9 +54,13 @@ const Header = () => {
                 <div className={`relative hidden md:flex md:justify-center md:items-center md:border-b-2 md:border-gray-200 md:py-2`}>
                     <div className="container md:flex md:flex-col lg:flex-row items-center lg:justify-between px-7 lg:px-0">
                         <div className="flex flex-row gap-8 text-xs">
-                            <div>citas@activeholistic.pe</div>
-                            <div>av. Mariscal La Mar 550, Oficina 204, Miraflores </div>
-                            <div>+51 965 836 372  </div>
+                            <div><a href="mailto:citas@activeholistic.pe" className="flex items-center gap-2">
+                                <MailIcon className="text-white" fill="#2563EB" /><span>citas@activeholistic.pe</span>
+                            </a></div>
+                            <div className="flex items-center gap-2">
+                                <MapPinIcon className="text-white" fill="#2563EB" /><span>av. Mariscal La Mar 550, Oficina 204, Miraflore</span></div>
+                            <div className="flex items-center gap-2">
+                                <PhoneIcon className="text-white" fill="#2563EB" /><span>+51 965 836 372</span></div>
                         </div>
                         <div className="hidden lg:flex gap-8 ">
                             <div><Link href={"/my-account"}><AvatarIcon className="text-black" /></Link></div>
