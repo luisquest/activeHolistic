@@ -4,6 +4,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import AvatarIcon from "../icons/avatar";
+import MailIcon from "../icons/mail";
+import MapPinIcon from "../icons/map-pin";
+import PhoneIcon from "../icons/phone";
 
 const Header = () => {
     const [openMenu, setOpenMenu] = useState(false);
@@ -51,9 +54,13 @@ const Header = () => {
                 <div className={`relative hidden md:flex md:justify-center md:items-center md:border-b-2 md:border-gray-200 md:py-2`}>
                     <div className="container md:flex md:flex-col lg:flex-row items-center lg:justify-between px-7 lg:px-0">
                         <div className="flex flex-row gap-8 text-xs">
-                            <div>citas@activeholistic.pe</div>
-                            <div>av. Mariscal La Mar 550, Oficina 204, Miraflores </div>
-                            <div>+51 965 836 372  </div>
+                            <div><a href="mailto:citas@activeholistic.pe" className="flex items-center gap-2">
+                                <MailIcon className="text-white" fill="#2563EB" /><span>citas@activeholistic.pe</span>
+                            </a></div>
+                            <div className="flex items-center gap-2">
+                                <MapPinIcon className="text-white" fill="#2563EB" /><span>av. Mariscal La Mar 550, Oficina 204, Miraflore</span></div>
+                            <div className="flex items-center gap-2">
+                                <PhoneIcon className="text-white" fill="#2563EB" /><span>+51 965 836 372</span></div>
                         </div>
                         <div className="hidden lg:flex gap-8 ">
                             <div><Link href={"/my-account"}><AvatarIcon className="text-black" /></Link></div>
@@ -129,30 +136,55 @@ const Header = () => {
                         </button>
                     </div>
                     {/*  LOWER - NAV MOBILE */}
-                    <nav className="p-10">
-                        <ul className="flex flex-col gap-12 text-xl font-bold text-white">
-                            <li>
-                                <Link href={"/"} className={`flex justify-between ${pathname === '/' ? active : 'hover:text-blue-500'}`}>
-                                    <span> {"Inicio"}</span><span>+</span>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={"/about-us"} className={`flex justify-between ${pathname === '/about-us' ? active : 'hover:text-blue-500'}`}>
-                                    <span>{"Servicios"}</span><span>+</span>
-                                </Link>
-                            </li>
-                            {/*  <li>
+                    <div>
+                        <nav className="w-100 p-10">
+                            <ul className="flex flex-col gap-12 text-xl font-bold text-white">
+                                <li>
+                                    <Link href={"/"} className={`flex justify-between ${pathname === '/' ? active : 'hover:text-blue-500'}`}>
+                                        <span> {"Inicio"}</span><span>+</span>
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href={"/about-us"} className={`flex justify-between ${pathname === '/about-us' ? active : 'hover:text-blue-500'}`}>
+                                        <span>{"Servicios"}</span><span>+</span>
+                                    </Link>
+                                </li>
+                                {/*  <li>
                                     <Link href={"/products"} className={`flex justify-between ${pathname === '/products' ? active : 'hover:text-blue-500'}`}>
                                         <span>{"Products"}</span><span>+</span>
                                     </Link>
                                 </li> */}
-                            <li>
-                                <Link href={"/contact"} className={`flex justify-between ${pathname === '/contact' ? active : 'hover:text-blue-500'}`}>
-                                    <span>{"Contacto"}</span><span>+</span>
-                                </Link>
-                            </li>
-                        </ul>
-                    </nav>
+                                <li>
+                                    <Link href={"/contact"} className={`flex justify-between ${pathname === '/contact' ? active : 'hover:text-blue-500'}`}>
+                                        <span>{"Contacto"}</span><span>+</span>
+                                    </Link>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div className="flex flex-col gap-5 items-center">
+                            <Link href={"/my-account"}><AvatarIcon className="text-white size-8" /></Link>
+                            {/* Buscador */}
+                            {/* <div className="relative flex gap-4 items-center rounded-full mx-5 w-[328px]">
+                                <input
+                                    id="email" name="email"
+                                    type="text"
+                                    placeholder="Your Email ..."
+                                    className="px-4 py-6 rounded-full focus:outline-none focus:border-blue-500 flex-1 h-16"
+                                    minLength={5}
+                                    required
+                                />
+                                <span className="absolute right-2 flex items-center">
+                                    <div className="col-span-3">
+                                        <button type="submit"
+                                            className={`rounded-full p-4 overflow-hidden relative group cursor-pointer font-medium h-16`}
+                                        >
+                                            <SearchIcon className="size-8" />
+                                        </button>
+                                    </div>
+                                </span>
+                            </div> */}
+                        </div>
+                    </div>
                 </div>
             }
         </header>

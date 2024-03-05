@@ -1,7 +1,7 @@
 import React from 'react';
 import IconProps from './iconProps';
 
-const PhoneIcon: React.FC<IconProps> = ({ fill = "none", width = '24px', height = '24px', className }) => {
+const SearchIcon: React.FC<IconProps> = ({ fill = "none", width = '24px', height = '24px', className }) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -17,9 +17,10 @@ const PhoneIcon: React.FC<IconProps> = ({ fill = "none", width = '24px', height 
             width={width}
             height={height}
         >
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+            <path d="M11 17.25a6.25 6.25 0 110-12.5 6.25 6.25 0 010 12.5z" />
+            <path d="M16 16l4.5 4.5" />
         </svg>
     );
 };
 
-export default PhoneIcon;
+export default SearchIcon;
