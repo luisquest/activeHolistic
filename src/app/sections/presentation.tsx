@@ -18,7 +18,7 @@ const SectionPresentation: React.FC<ISectionPresentationProps> = ({ title, subti
                     {title}
                 </div>
                 <div className="text-white text-lg font-bold flex gap-6">
-                    <Link href="/" className="text-blue-500 hover:text-white">Home</Link>
+                    <Link href="/" className="text-blue-500 hover:text-white">Inicio</Link>
                     {subtitle.map((item, i) => (
                         <div key={i} className="flex gap-6">
                             <span>{"//"}</span>
