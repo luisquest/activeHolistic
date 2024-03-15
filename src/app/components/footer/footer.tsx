@@ -109,15 +109,15 @@ const Footer = () => {
                             <div className="text-2xl font-bold mb-8 text-blue-500">Explore</div>
                             <div>
                                 <ul className="grid grid-cols-2 gap-8 text-sm font-bold text-white">
-                                    <li><Link href={"/"} className="w-1/2 hover:text-blue-800" ><span className="text-blue-800 mr-1">&rsaquo</span>Home</Link></li>
-                                    <li><Link href={"/about-us"} className="w-1/2 hover:text-blue-800" ><span className="text-blue-800 mr-1">&rsaquo</span>About Us</Link></li>
-                                    <li><Link href={"/contact"} className="w-1/2 hover:text-blue-800" ><span className="text-blue-800 mr-1">&rsaquo</span>Contactar</Link></li>
+                                    <li><Link href={"/"} className="w-1/2 hover:text-blue-800" ><span className="text-blue-800 mr-1">&rsaquo;</span>Inicio</Link></li>
+                                    <li><Link href={"/about-us"} className="w-1/2 hover:text-blue-800" ><span className="text-blue-800 mr-1">&rsaquo;</span>Servicios</Link></li>
+                                    <li><Link href={"/contact"} className="w-1/2 hover:text-blue-800" ><span className="text-blue-800 mr-1">&rsaquo;</span>Contactar</Link></li>
                                 </ul>
                             </div>
                         </div>
                         {/* DERECHA */}
                         <div className="w-full md:w-1/2 lg:w-2/5">
-                            <div className="text-2xl font-bold mb-8 text-blue-500">Suscribe</div>
+                            <div className="text-2xl font-bold mb-8 text-blue-500">Suscribirme</div>
                             <div className="relative mb-4 max-w-96">
                                 <form onSubmit={handleSubmit} className="relative flex items-center border rounded-full ">
                                     <input
@@ -141,15 +141,15 @@ const Footer = () => {
                             </div>
                             <div className="flex items-center">
                                 <input type="checkbox" value="suscribed" name="suscribed" />
-                                <label htmlFor="suscribed" className="ml-2 text-sm text-white">I authorize the use of the information entered</label>
+                                <label htmlFor="suscribed" className="ml-2 text-sm text-white">Autorizo el uso de la información ingresada</label>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="py-3 border-t-2 border-gray-400">
-                    <div className="flex flex-col items-center">
-                        <div className="container w-screen text-white text-center"><span className="text-blue-400">Like-themes</span> © All Rights Reserved - 2022 - <span className="text-blue-400">Purchase</span></div>
-                    </div>
+                    <a href="https://pablovegaau.github.io/portafolio/" target="_blank" className="flex flex-col items-center">
+                        <div className="container w-screen text-white text-center"><span className="text-blue-400">PCVV</span> © All Rights Reserved - 2024 - <span className="text-blue-400">Contratado</span></div>
+                    </a>
                 </div>
             </div>
         </footer>
