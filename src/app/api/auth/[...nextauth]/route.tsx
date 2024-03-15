@@ -21,10 +21,10 @@ const authOptions: AuthOptions = {
                         email: email
                     }
                 })
-                if (!userFound) throw new Error("User not found")
+                if (!userFound) throw new Error("Usuario no encontrado")
 
                 const matchPassword = await bcrypt.compare(password, userFound.password)
-                if (!matchPassword) throw new Error("Wrong password")
+                if (!matchPassword) throw new Error("Contraseña incorrecta")
 
                 return {
                     id: userFound.id.toString(),

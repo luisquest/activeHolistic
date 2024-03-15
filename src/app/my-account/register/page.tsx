@@ -26,7 +26,7 @@ const Page = () => {
 
     if (sessionChecked) {
         return <main className="flex flex-col items-center gap-16 pb-16">
-            <SectionPresentation title="My Account" subtitle={["My Account"]} />
+            <SectionPresentation title="Mi cuenta" subtitle={["Mi cuenta"]} />
             <SectionRegister />
         </main>
     }
