@@ -3,10 +3,10 @@ import ICarousel from "./interfaces/icarousel";
 const CarouselData: ICarousel[] = [
     {
         imagen: "https://flowbite.com/docs/images/carousel/carousel-1.svg",
-        caption: "cambio 1",
-        tituloResaltado: "Revolution",
-        titulo: "Tecnology Clinic",
-        descripcion: "Our team of experts is dedicated to helping you regain mobility and independence through advanced prosthetic technology. We prioritize patient-centered care to ensure the bestpossible outcome.",
+        caption: "Active Holistic",
+        tituloResaltado: "TE AYUDAMOS A VIVIR MEJOR",
+        titulo: "TRATANDO  LA CAUSA DE TU PROBLEMA",
+        descripcion: "“Nuestro equipo te ayuda a mejorar tu salud con osteopatía y fisioterapia, desde un enfoque integrativo que considera tu sueño, alimentación y estilo de vida.",
         botonTexto: "Boton 1",
         botonRedirecionar: "Redirect 1"
     },
