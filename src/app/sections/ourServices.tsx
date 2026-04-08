@@ -15,8 +15,8 @@ const SectionOurServices = () => {
                             </h2>
                         </div>
                         <p className="text-center text-lg">
-                            Prosthetics also has the potential to enhance healthcare outcomes by improving the mobility and independence of patients,
-                            reducing healthcare costs, and improving overall quality of life.
+                            No somos una clínica más. Sabemos lo frustrante que es vivir con dolor y no encontrar una solución real.<br />
+Por eso trabajamos diferente: buscamos la causa de tu problema para ayudarte a resolverlo de verdad.
                         </p>
                         <button className="rounded-full px-14 min-w-48 py-5 m-1 overflow-hidden relative group cursor-pointer font-medium bg-blue-500 text-blue-950">
                             <span className="absolute w-60 h-0 transition-all duration-300 origin-center rotate-90 -translate-x-20 bg-black top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
