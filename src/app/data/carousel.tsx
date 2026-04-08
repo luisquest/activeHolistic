@@ -3,7 +3,7 @@ import ICarousel from "./interfaces/icarousel";
 const CarouselData: ICarousel[] = [
     {
         imagen: "https://flowbite.com/docs/images/carousel/carousel-1.svg",
-        caption: "Caption 1",
+        caption: "cambio 1",
         tituloResaltado: "Revolution",
         titulo: "Tecnology Clinic",
         descripcion: "Our team of experts is dedicated to helping you regain mobility and independence through advanced prosthetic technology. We prioritize patient-centered care to ensure the bestpossible outcome.",
