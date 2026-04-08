@@ -7,11 +7,11 @@ const SectionOurServices = () => {
                 <div className="flex flex-col gap-12 items-center justify-center">
                     <div className="flex flex-col lg:flex-row gap-12 items-center">
                         <div className="text-center lg:text-start">
-                            <h6 className="font-semibold">OUR SERVICES</h6>
+                            <h6 className="font-semibold">NUESTROS SERVICIOS</h6>
                             <h2 className="text-6xl font-bold mt-3">
-                                <span className="text-blue-500">We Provide</span><br />
-                                Safe and Useful<br />
-                                Prosthetics
+                                <span className="text-blue-500">PORQUE</span><br />
+                                ELEGIRNOS<br />
+                               
                             </h2>
                         </div>
                         <p className="text-center text-lg">
