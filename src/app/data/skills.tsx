@@ -3,18 +3,18 @@ import ISkillList from "./interfaces/iskilllist";
 const SkillsData: ISkillList[] = [
     {
         id: "01.",
-        title: "High Comfort",
-        description: "A prosthetic device is not just a piece of hardware, it's a symbol of resilience."
+        title: "Enfoque integrativo real",
+        description: "No trabajan solo sobre la zona del dolor. Analizan el cuerpo como un todo, considerando factores como el sistema nervioso, la postura, el movimiento, el sueño y los hábitos para encontrar la causa del problema."
     },
     {
         id: "02.",
-        title: "Lifetime Support",
-        description: "Prosthetics is a field where science and humanity work hand in hand to change lives."
+        title: "Alta especialización clínica",
+        description: "Cuentan con formación en osteopatía y fisioterapia especializada, lo que les permite abordar casos complejos con un enfoque preciso, actualizado y basado en evidencia."
     },
     {
         id: "03.",
-        title: "Eco materials",
-        description: "With prosthetics, we are not just restoring physical abilities, we are restoring confidence and hope."
+        title: "Evaluación profunda y personalizada",
+        description: "Cada paciente es único. Por eso realizan una valoración completa para entender qué está pasando realmente y diseñar un tratamiento específico para cada caso."
     }
 ];
 
