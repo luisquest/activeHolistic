@@ -7,7 +7,7 @@ const CarouselData: ICarousel[] = [
         tituloResaltado: "TE AYUDAMOS A VIVIR MEJOR",
         titulo: "TRATANDO  LA CAUSA DE TU PROBLEMA",
         descripcion: "“Nuestro equipo te ayuda a mejorar tu salud con osteopatía y fisioterapia, desde un enfoque integrativo que considera tu sueño, alimentación y estilo de vida.",
-        botonTexto: "Boton 1",
+        botonTexto: "Actualizado",
         botonRedirecionar: "Redirect 1"
     },
     {
