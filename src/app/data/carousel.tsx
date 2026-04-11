@@ -12,7 +12,7 @@ const CarouselData: ICarousel[] = [
         botonRedirecionar: "Redirect 1"
     },
     {
-        imagen: "https://flowbite.com/docs/images/carousel/carousel-2.svg",
+        imagen: "/assets/images/photos/sala1.JPG",
         caption: "Caption 2",
         tituloResaltado: "Revolution",
         titulo: "Tecnology Clinic",
@@ -21,7 +21,7 @@ const CarouselData: ICarousel[] = [
         botonRedirecionar: "Redirect 2"
     },
     {
-        imagen: "https://flowbite.com/docs/images/carousel/carousel-3.svg",
+        imagen: "/assets/images/photos/sala2.JPG",
         caption: "Caption 3",
         tituloResaltado: "Revolution",
         titulo: "Tecnology Clinic",
