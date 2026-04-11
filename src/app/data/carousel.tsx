@@ -1,17 +1,18 @@
 import ICarousel from "./interfaces/icarousel";
 
+
 const CarouselData: ICarousel[] = [
     {
-        imagen: "https://flowbite.com/docs/images/carousel/carousel-1.svg",
-        caption: "cambio 1",
-        tituloResaltado: "Revolution",
-        titulo: "Tecnology Clinic",
-        descripcion: "Our team of experts is dedicated to helping you regain mobility and independence through advanced prosthetic technology. We prioritize patient-centered care to ensure the bestpossible outcome.",
-        botonTexto: "Boton 1",
+        imagen: "/assets/images/photos/car1.JPG",
+        caption: "Active Holistic",
+        tituloResaltado: "TE AYUDAMOS A VIVIR MEJOR",
+        titulo: "TRATANDO  LA CAUSA DE TU PROBLEMA",
+        descripcion: "“Nuestro equipo te ayuda a mejorar tu salud con osteopatía y fisioterapia, desde un enfoque integrativo que considera tu sueño, alimentación y estilo de vida.",
+        botonTexto: "Actualizado",
         botonRedirecionar: "Redirect 1"
     },
     {
-        imagen: "https://flowbite.com/docs/images/carousel/carousel-2.svg",
+        imagen: "/assets/images/photos/sala1.JPG",
         caption: "Caption 2",
         tituloResaltado: "Revolution",
         titulo: "Tecnology Clinic",
@@ -20,11 +21,11 @@ const CarouselData: ICarousel[] = [
         botonRedirecionar: "Redirect 2"
     },
     {
-        imagen: "https://flowbite.com/docs/images/carousel/carousel-3.svg",
+        imagen: "/assets/images/photos/sala2.JPG",
         caption: "Caption 3",
         tituloResaltado: "Revolution",
         titulo: "Tecnology Clinic",
-        descripcion: "Our team of experts is dedicated to helping you regain mobility and independence through advanced prosthetic technology. We prioritize patient-centered care to ensure the bestpossible outcome.",
+        descripcion: "Our teakm of experts is dedicated to helping you regain mobility and independence through advanced prosthetic technology. We prioritize patient-centered care to ensure the bestpossible outcome.",
         botonTexto: "Boton 3",
         botonRedirecionar: "Redirect 3"
     },

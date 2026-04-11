@@ -7,11 +7,11 @@ const SectionSkills = () => {
                 <div className="flex flex-col xl:flex-row gap-14 items-center lg:justify-center py-4 min-h-max">
                     <div className="flex flex-col gap-8 w-full">
                         <div className="text-center xl:text-start xl:mx-4">
-                            <div className="text-sm font-mono font-semibold leading-tight tracking-widest">MEAT OUR TEAM</div>
+                            <div className="text-sm font-mono font-semibold leading-tight tracking-widest">CONOCE A NUESTRO EQUIPO</div>
                             <div className="text-6xl font-bold">
-                                <span className="text-blue-500">Motor Skills</span> <br />
-                                Guarantee You<br />
-                                a Comfortable Life
+                                <span className="text-blue-500">Profesionales que no solo tratan, </span> <br />
+                                entienden tu cuerpo para ayudarte<br />
+                                a mejorar de verdad
                             </div></div>
                         <div className="mx-8 xl:mx-4">
                             {SkillsData.map((skill, i) => (

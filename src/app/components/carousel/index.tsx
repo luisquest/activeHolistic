@@ -32,7 +32,8 @@ const Carousel = () => {
                     key={index}
                     data-carousel-item
                     style={{
-                        backgroundImage: `url(${carousel.imagen})`,
+                        backgroundImage: `url("${carousel.imagen}")`,
+                       
                         backgroundRepeat: "no-repeat",
                         backgroundSize: "cover",
                         backgroundPosition: "center"
@@ -45,7 +46,7 @@ const Carousel = () => {
                                 {carousel.caption}
                             </div>
                             {/* Titulo */}
-                            <div className="text-3xl md:text-7xl text-center lg:text-start font-bold ">
+                            <div className="text-3xl  text-center lg:text-start font-bold ">
                                 <span className="text-blue-500">
                                     {carousel.tituloResaltado} <br />
                                 </span>
