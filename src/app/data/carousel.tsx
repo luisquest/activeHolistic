@@ -25,7 +25,7 @@ const CarouselData: ICarousel[] = [
         caption: "Caption 3",
         tituloResaltado: "Revolution",
         titulo: "Tecnology Clinic",
-        descripcion: "Our team of experts is dedicated to helping you regain mobility and independence through advanced prosthetic technology. We prioritize patient-centered care to ensure the bestpossible outcome.",
+        descripcion: "Our teakm of experts is dedicated to helping you regain mobility and independence through advanced prosthetic technology. We prioritize patient-centered care to ensure the bestpossible outcome.",
         botonTexto: "Boton 3",
         botonRedirecionar: "Redirect 3"
     },
