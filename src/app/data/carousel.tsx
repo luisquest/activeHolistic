@@ -3,7 +3,7 @@ import ICarousel from "./interfaces/icarousel";
 
 const CarouselData: ICarousel[] = [
     {
-        imagen: "/assets/images/photos/woman_pierna_protesis.jpg",
+        imagen: "/assets/images/photos/car1.jpg",
         caption: "Active Holistic",
         tituloResaltado: "TE AYUDAMOS A VIVIR MEJOR",
         titulo: "TRATANDO  LA CAUSA DE TU PROBLEMA",
