@@ -63,25 +63,25 @@ const SectionFormContact = () => {
         <section className="self-center">
             <div className="container">
                 <form onSubmit={handleSubmit} className="flex flex-col gap-8 items-center p-6 md:p-12 lg:p-16 bg-gray-300">
-                    <h1 className="text-2xl font-bold">Send Message</h1>
-                    <div>Fill out this form, and our specialists will contact you shortly for a detailed consultation.</div>
+                    <h1 className="text-2xl font-bold">Enviar mensaje</h1>
+                    <div>Complete este formulario y nuestros especialistas se pondrán en contacto con usted en breve para una consulta detallada.</div>
                     <input
                         className="shadow appearance-none border rounded-full w-full py-4 px-3 text-gray-700 focus:border-blue-500 leading-tight focus:outline-none focus:shadow-outline"
-                        id="subject" name="subject" onChange={handleChange} placeholder="Subject"
+                        id="subject" name="subject" onChange={handleChange} placeholder="Asunto"
                     />
                     <div className="flex gap-4 w-full">
                         <input
                             className="shadow appearance-none border rounded-full w-full py-4 px-3 text-gray-700 focus:border-blue-500 leading-tight focus:outline-none focus:shadow-outline"
-                            id="name" name="name" type="text" placeholder="Your name" onChange={handleChange}
+                            id="name" name="name" type="text" placeholder="Nombres " onChange={handleChange}
                         />
                         <input
                             className="shadow appearance-none border rounded-full w-full py-4 px-3 text-gray-700 focus:border-blue-500 leading-tight focus:outline-none focus:shadow-outline"
-                            id="email" name="email" type="email" placeholder="Your email" onChange={handleChange}
+                            id="email" name="email" type="email" placeholder="Correo electrónico" onChange={handleChange}
                         />
                     </div>
                     <textarea
                         className="shadow-sm focus:ring-indigo-500 focus:border-blue-500 mt-1 block w-full py-4 px-3 border-gray-300 rounded-md outline-none"
-                        id="message" name="message" rows={3} placeholder="Message" onChange={handleChange}
+                        id="message" name="message" rows={3} placeholder="Mensaje" onChange={handleChange}
                     ></textarea>
                     <button
                         className={`rounded-full px-16 py-5 m-1 overflow-hidden relative group cursor-pointer font-medium 
