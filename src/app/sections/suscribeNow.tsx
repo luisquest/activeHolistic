@@ -64,11 +64,11 @@ const SectionSuscribeNow = () => {
             <div className="container flex justify-center">
                 <div className="flex flex-col md:flex-row gap-0 md:gap-8 items-center justify-center py-10 md:py-16 w-full max-w-[1000px]">
                     <NewsLetterIcon width="100px" height="120px" className="text-cyan-950" />
-                    <div className="md:w-2/6 text-3xl font-bold text-cyan-950 tracking-tighter">
-                        Suscríbete ahora
-                        <br />
-                        <span className="text-white">a nuestro boletín</span>
-                    </div>
+                   <div className="md:w-2/6 text-[26px] font-extrabold text-cyan-950 tracking-tighter leading-tight">
+    Suscríbete ahora
+    <br />
+    <span className="text-white">a nuestro boletín</span>
+</div>
                     <div className="w-full mt-8 md:mt-0">
                         <div className="relative">
                             <form onSubmit={handleSubmit} className="relative flex flex-col md:flex-row gap-4 md:gap-0 items-center rounded-full mx-6 md:mx-0">
