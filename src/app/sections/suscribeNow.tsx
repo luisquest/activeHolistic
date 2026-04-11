@@ -75,7 +75,7 @@ const SectionSuscribeNow = () => {
                                 <input
                                     id="email" name="email"
                                     type="text"
-                                    placeholder="Your Email ..."
+                                    placeholder="Correo electrónico ..."
                                     className="p-4 rounded-full focus:outline-none focus:border-blue-500 flex-1 h-16 w-full"
                                     onChange={handleChange}
                                     minLength={5}
@@ -87,7 +87,7 @@ const SectionSuscribeNow = () => {
                                             className={`rounded-full px-12 md:px-24 py-4 overflow-hidden relative group cursor-pointer font-medium h-16 
                                             ${canSubmit ? 'bg-cyan-950 hover:bg-white transition-all duration-700 text-white' : 'bg-white text-cyan-950'}`}
                                             disabled={!canSubmit}>
-                                            <span className="relative transition duration-300 group-hover:text-cyan-700 ease text-md font-bold">Suscribe →</span>
+                                            <span className="relative transition duration-300 group-hover:text-cyan-700 ease text-md font-bold">Suscribirme →</span>
                                         </button>
                                     </div>
                                 </span>
