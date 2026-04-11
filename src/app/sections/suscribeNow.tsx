@@ -65,9 +65,9 @@ const SectionSuscribeNow = () => {
                 <div className="flex flex-col md:flex-row gap-0 md:gap-8 items-center justify-center py-10 md:py-16 w-full max-w-[1000px]">
                     <NewsLetterIcon width="100px" height="120px" className="text-cyan-950" />
                     <div className="md:w-2/6 text-3xl font-bold text-cyan-950 tracking-tighter">
-                        Subscribe now
+                        Suscríbete ahora
                         <br />
-                        <span className="text-white">to our newletter</span>
+                        <span className="text-white">a nuestro boletín</span>
                     </div>
                     <div className="w-full mt-8 md:mt-0">
                         <div className="relative">
