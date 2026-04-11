@@ -32,7 +32,8 @@ const Carousel = () => {
                     key={index}
                     data-carousel-item
                     style={{
-                        backgroundImage: `url(${carousel.imagen})`,
+                        backgroundImage: `url("${carousel.imagen}")`,
+                       
                         backgroundRepeat: "no-repeat",
                         backgroundSize: "cover",
                         backgroundPosition: "center"
