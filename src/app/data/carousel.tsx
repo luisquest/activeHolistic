@@ -1,8 +1,9 @@
 import ICarousel from "./interfaces/icarousel";
 
+
 const CarouselData: ICarousel[] = [
     {
-        imagen: "https://flowbite.com/docs/images/carousel/carousel-1.svg",
+        imagen: "/assets/images/photos/woman_pierna_protesis.jpg",
         caption: "Active Holistic",
         tituloResaltado: "TE AYUDAMOS A VIVIR MEJOR",
         titulo: "TRATANDO  LA CAUSA DE TU PROBLEMA",
